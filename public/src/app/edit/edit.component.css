@@ -1,0 +1,16 @@
+*{
+    margin-left: 30px;
+}
+h5{
+    color: violet;
+}
+#body{
+    width: 350px;
+    height: 150px;
+    border: 1px solid grey;
+}
+#cancelB,#submitB{
+    background-color: skyblue;
+    color:white;
+    margin-top: 10px;
+}

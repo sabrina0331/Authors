@@ -1,0 +1,13 @@
+
+<h5>Edit this author:</h5>
+<div id="body">
+  <form (submit)="updateAuthor(thisAuthor)">
+    <h5>Name:</h5>
+    <input type="text" name="thisAuthor.author" [(ngModel)]="thisAuthor.author" />
+    <br>
+    <button id="cancelB" [routerLink]="['/']">Cancel</button>
+    <button id="submitB" type="submit">Submit</button>
+  </form>
+</div>
+
+<h5>{{ error }}</h5>
