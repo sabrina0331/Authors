@@ -27,5 +27,8 @@ export class HttpService {
   deleteAuthor(id){
     return this._http.delete('/deleteOne/'+id)
   }
+  addQuote(newQuote){
+    return this._http.post('/addQuote',newQuote)
+  }
  
 }

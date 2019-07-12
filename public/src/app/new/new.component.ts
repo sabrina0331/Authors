@@ -19,14 +19,14 @@ export class NewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.newAuthor = {author:""}
+    this.newAuthor = {author:"", quote:""}
   }
   
   createAuthor(){
     let addAuthor = this._httpService.addAuthor(this.newAuthor)
     addAuthor.subscribe(data=>{
       if((data as any).message === "Success"){
-        this.newAuthor = {author:""}
+        this.newAuthor = {author:"", quote:""}
         this.goHome();
       }else{
         this.error = "Author name must be at least 3 characters"

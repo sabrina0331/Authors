@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.showAllAuthors();
-    this.thisAuthor = {id: '', author: ''};
+    this.thisAuthor = {id: '', author: '', quote: ''};
     this._router.params.subscribe((params: Params)=>{
     this.thisAuthor = {id: params['id'], author: this.thisAuthor.author};
     this._httpService.editAuthor(this.thisAuthor);
@@ -53,5 +53,16 @@ showAuthor(id){
    this._route.navigate(['/edit'])
  }
  
+ viewQuotes(id){
+   let oneAuthor = this._httpService.editAuthor(id);
+   oneAuthor.subscribe(data=>{
+     console.log("author who has quotes", data)
+     this.goQuotes();
+   })
+  
+ }
+goQuotes(){
+  this._route.navigate(['/quotes'])
+}
   
 }

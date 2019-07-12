@@ -1,0 +1,47 @@
+
+*{
+    margin-left: 30px;
+}
+h5{
+    color: rgb(136, 47, 77);
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    border: 1px solid #ddd;
+    
+  }
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+tr:nth-child(even){background-color: #f2f2f2}
+  
+th {
+    background-color: grey;
+    color: white;
+  }
+#voteU{
+    width: 100px;
+    height: 40px;
+    margin-left: 30px;
+    background-image: linear-gradient( yellow, grey); 
+}
+#deleteB{
+    width: 100px;
+    height: 40px;
+    margin-left: 30px;
+    background-image: linear-gradient( pink, grey); 
+}
+#voteD{
+    width: 100px;
+    height: 40px;
+    margin-left: 30px;
+    background-image: linear-gradient(darkcyan, grey); 
+}

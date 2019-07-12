@@ -1,0 +1,20 @@
+<a [routerLink]="['/']">Home</a>     |      <a [routerLink]="['/addQ']">Add a quote</a>
+<h5>Quotes by someone:</h5>  
+<table>
+    <tr>
+      <th>Quote</th>
+      <th>Votes</th>
+      <th>Actions available</th>
+    </tr>
+    <tr>
+      <td>{{ QuotePoster.quote }}</td>
+      <td>votes</td>
+      <td>
+        <button (click)="vioteQuotes(author['_id'])"  id="voteU" >Vote up</button>
+        <button (click)="showAuthor(author['_id'])"  id="voteD" >Vote down</button>
+        <button (click)="deleteAuthor(author['_id'])" id="deleteB">Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <!-- *ngFor="let quote of QuotePoster" -->

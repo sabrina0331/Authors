@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { NewComponent } from './new/new.component';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { NewquoteComponent } from './newquote/newquote.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { EditComponent } from './edit/edit.component';
     NewComponent,
     HomeComponent,
     EditComponent,
+    QuotesComponent,
+    NewquoteComponent,
 
   ],
   imports: [

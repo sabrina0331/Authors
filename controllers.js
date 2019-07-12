@@ -50,5 +50,20 @@ module.exports = {
                 res.json(author);
             }
         })
-    }
+    },
+    addQuote: function(req,res){
+        Author.findById({_id: req.params._id}, function(err,author){
+            author.author =req.body.author;
+            author.quote = req.body.quote;
+            author.save(function(err){
+                if(err){
+                    res.json(err)
+                }else{
+                    author.quote.push(req.body);
+                    author.save(res.json(author))
+                }
+            })
+            
+        })
+    },
 }

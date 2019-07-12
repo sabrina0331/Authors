@@ -8,6 +8,7 @@
   <tr *ngFor="let author of authors">
     <td>{{author.author}}</td>
     <td>
+      <button (click)="viewQuotes(author['_id'])"  id="viewQB">View Quotes</button>
       <button (click)="showAuthor(author['_id'])"  id="editB" >Edit</button>
       <button (click)="deleteAuthor(author['_id'])" id="deleteB">Delete</button>
     </td>
